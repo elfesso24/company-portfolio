@@ -1,0 +1,535 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Smooth Scrolling */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Dark Theme */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #121212;
+    color: white;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #1e1e1e;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+/* Logo */
+.logo h1 {
+    color: blueviolet;
+    font-size: 1.8rem;
+}
+
+/* Navigation */
+nav {
+    display: flex;
+    align-items: center;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+}
+
+.nav-links li {
+    margin-left: 20px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: white;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: blueviolet;
+}
+
+/* Call-to-Action Button */
+.cta-btn {
+    background-color: blueviolet;
+    padding: 10px 20px;
+    color: white;
+    border-radius: 30px;
+    text-decoration: none;
+    margin-left: 20px;
+    font-size: 1rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.cta-btn:hover {
+    transform: scale(1.1);
+    box-shadow: 0px 4px 15px rgba(138, 43, 226, 0.6);
+}
+
+/* Mobile Menu Icon */
+.mobile-menu {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    position: fixed;
+    top: 20px;
+    right: 20px; /* Position burger icon on the right */
+    z-index: 20;
+}
+
+.menu-bar {
+    width: 30px;
+    height: 4px;
+    background-color: blueviolet;
+    margin: 5px;
+    transition: all 0.3s ease;
+}
+
+/* Responsive Navigation */
+.nav-toggle {
+    display: none;
+    
+}
+
+
+/* Responsive Design for Navigation */
+@media screen and (max-width: 768px) {
+    .mobile-menu {
+        display: flex;
+    }
+
+    nav {
+        flex-direction: column;
+        align-items: center;
+        display: none;
+        width: 100%;
+        background-color: #1e1e1e;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        text-align: center;
+        
+    }
+
+    .nav-links li {
+        margin: 10px 0;
+    }
+
+    .cta-btn {
+        margin: 20px 0;
+    }
+
+    /* Toggle mobile menu on click */
+    .nav-toggle:checked + nav {
+        display: flex;
+    }
+}
+
+/* Hero Section */
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 100px 50px;
+    background-color: #1e1e1e;
+    color: white;
+    height: 100vh;
+}
+
+/* Hero Section */
+.hero {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Two equal columns */
+    align-items: center;
+    gap: 30px; /* Space between content and image */
+    padding: 100px 50px;
+    background-color: #1e1e1e;
+    color: white;
+    height: 100vh;
+}
+
+/* Hero Content */
+.hero-content {
+    animation: slideInFromLeft 1s ease-out; /* Animate the content */
+}
+
+/* Hero Title and Subtitle */
+.hero-title {
+    font-size: 3rem;
+    color: blueviolet;
+    margin-bottom: 20px;
+}
+
+.hero-subtitle {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+    line-height: 1.6;
+}
+
+/* Button Container using Grid */
+.hero-buttons {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    gap: 15px;
+    margin-top: 20px;
+}
+
+/* Button Styles */
+.hero-buttons .btn {
+    text-decoration: none;
+    padding: 15px 30px;
+    font-size: 1rem;
+    border-radius: 30px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.primary-btn {
+    background-color: blueviolet;
+    color: white;
+}
+
+.secondary-btn {
+    background-color: transparent;
+    color: blueviolet;
+    border: 2px solid blueviolet;
+}
+
+.btn:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 4px 15px rgba(138, 43, 226, 0.6);
+}
+
+/* Hero Image Styling */
+.hero-image {
+    animation: fadeInFromRight 1s ease-out; /* Animate the image */
+    overflow: hidden;
+    display: grid;
+}
+/*if hero image class is used in eny tag all child tags inside it will inherit the img class section asswell*/
+.hero-image img {
+    width: 100%;
+    height: 90%;
+    border-radius: 10px; /* Optional: rounded corners */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    
+}
+
+
+/* Responsive Hero Section */
+@media screen and (max-width: 768px) {
+    .hero {
+        grid-template-columns: 1fr; 
+        text-align: center;
+        padding: 50px 20px;
+        height: auto; /* Adjust height */
+    }
+
+    .hero-content {
+        margin-bottom: 20px;
+    }
+
+    .hero-title {
+        font-size: 2.2rem;
+    }
+
+    .hero-subtitle {
+        font-size: 1rem;
+    }
+
+    .hero-image img {
+        width: 80%; /* Resize image on smaller screens */
+        margin: 0 auto; /* Center the image */
+    }
+}
+/* Features Section */
+.features {
+    padding: 80px 50px;
+    background-color: #121212;
+    text-align: center;
+}
+
+.section-title {
+    font-size: 2.5rem;
+    color: blueviolet;
+    margin-bottom: 50px;
+}
+
+.features-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+}
+
+.feature-card {
+    background-color: #1e1e1e;
+    padding: 40px;
+    border-radius: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.feature-icon {
+    font-size: 3rem;
+    color: blueviolet;
+    margin-bottom: 20px;
+}
+
+.feature-title {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+}
+
+.feature-description {
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+.feature-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 4px 15px rgba(138, 43, 226, 0.6);
+}
+
+/* Responsive Features Section for features*/
+@media screen and (max-width: 1200px) {
+    .features-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .features-container {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Pricing Section */
+.pricing {
+    padding: 80px 50px;
+    background-color: #121212;
+    text-align: center;
+}
+
+.pricing .section-title {
+    font-size: 2.5rem;
+    color: blueviolet;
+    margin-bottom: 50px;
+}
+
+.pricing-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.pricing-card {
+    background-color: #1e1e1e;
+    padding: 40px;
+    border-radius: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.plan-title {
+    font-size: 1.8rem;
+    color: blueviolet;
+    margin-bottom: 20px;
+}
+
+.plan-price {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+}
+
+.plan-price span {
+    font-size: 1rem;
+    color: #b3b3b3;
+}
+
+.plan-features {
+    list-style: none;
+    margin-bottom: 30px;
+}
+
+.plan-features li {
+    margin-bottom: 10px;
+    font-size: 1rem;
+}
+
+.pricing-btn {
+    background-color: blueviolet;
+    color: white;
+    padding: 15px 30px;
+    border-radius: 30px;
+    text-decoration: none;
+}
+
+.pricing-btn:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 4px 15px rgba(138, 43, 226, 0.6);
+}
+
+/* Popular Plan */
+.popular {
+    background-color: #282828;
+    border: 2px solid blueviolet;
+}
+
+/* Responsive Pricing Section */
+@media screen and (max-width: 1200px) {
+    .pricing-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .pricing-container {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Testimonials Section */
+.testimonials {
+    padding: 80px 50px;
+    background-color: #121212;
+    text-align: center;
+}
+
+
+.testimonials-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.testimonial-card {
+    background-color: #1e1e1e;
+    padding: 30px;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+.testimonial-text {
+    font-size: 1rem;
+    margin-bottom: 20px;
+}
+
+.testimonial-author {
+    font-size: 1.2rem;
+    color: blueviolet;
+    margin-bottom: 5px;
+}
+
+.testimonial-company {
+    font-size: 1rem;
+    color: #b3b3b3;
+}
+
+.testimonial-card:hover {
+    transform: scale(1.05);
+}
+
+/* Responsive Testimonials Section */
+@media screen and (max-width: 1200px) {
+    .testimonials-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .testimonials-container {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Contact Section */
+.contact {
+    padding: 80px 50px;
+    background-color: #121212;
+    text-align: center;
+}
+
+.contact-description {
+    font-size: 1.2rem;
+    margin-bottom: 50px;
+    line-height: 1.6;
+}
+
+.contact-form {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.form-group {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 1rem;
+    color: #b3b3b3;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #333;
+    border-radius: 5px;
+    background-color: #1e1e1e;
+    color: white;
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+    color: #b3b3b3;
+}
+
+.contact-btn {
+    background-color: blueviolet;
+    color: white;
+    padding: 15px 30px;
+    border-radius: 30px;
+    border: none;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.contact-btn:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 4px 15px rgba(138, 43, 226, 0.6);
+}
+
+/* Animations */
+@keyframes slideInFromLeft {
+    from {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInFromRight {
+    from {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}

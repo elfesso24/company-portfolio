@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ERP Landing Page</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <header>
+        <div class="logo">
+            <h1>MasterFast</h1>
+        </div>
+        <input type="checkbox" id="nav-toggle" class="nav-toggle">
+        <nav>
+            <ul class="nav-links">
+                <li><a href="#hero">Home</a></li>
+                <li><a href="#features">Features</a></li>
+                <li><a href="#pricing">Pricing</a></li>
+                <li><a href="#testimonials">Testimonials</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <a href="#" class="cta-btn">Get a Free Demo</a>
+        </nav>
+        <label for="nav-toggle" class="mobile-menu" id="mobile-menu">
+            <div class="menu-bar"></div>
+            <div class="menu-bar"></div>
+            <div class="menu-bar"></div>
+        </label>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="hero" class="hero">
+        <div class="hero-content">
+            <h1 class="hero-title">Transform Your Business with Our ERP Solution</h1>
+            <p class="hero-subtitle">Automate, streamline, and grow your business with our easy-to-use ERP software.</p>
+            <div class="hero-buttons">
+                <a href="#" class="btn primary-btn">Get a Free Demo</a>
+                <a href="#" class="btn secondary-btn">Learn More</a>
+            </div>
+        </div>
+        <div class="hero-image">
+            <img src="7063226.jpg" alt="ERP Solution">
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="features">
+        <h2 class="section-title">Key Features</h2>
+        <div class="features-container">
+            <div class="feature-card">
+                <i class="fas fa-chart-line feature-icon"></i>
+                <h3 class="feature-title">Real-time Analytics</h3>
+                <p class="feature-description">Get actionable insights from your data in real-time and make smarter decisions.</p>
+            </div>
+            <div class="feature-card">
+                <i class="fas fa-boxes feature-icon"></i>
+                <h3 class="feature-title">Inventory Management</h3>
+                <p class="feature-description">Easily manage your stock levels, orders, and deliveries with our integrated system.</p>
+            </div>
+            <div class="feature-card">
+                <i class="fas fa-user-shield feature-icon"></i>
+                <h3 class="feature-title">Advanced Security</h3>
+                <p class="feature-description">Protect your business data with our state-of-the-art encryption and security protocols.</p>
+            </div>
+            <div class="feature-card">
+                <i class="fas fa-users feature-icon"></i>
+                <h3 class="feature-title">CRM Integration</h3>
+                <p class="feature-description">Manage your customer relationships effectively with our seamless CRM integration.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section id="pricing" class="pricing">
+        <h2 class="section-title">Choose Your Plan</h2>
+        <div class="pricing-container">
+            <div class="pricing-card">
+                <h3 class="plan-title">Basic</h3>
+                <p class="plan-price">$19<span>/month</span></p>
+                <ul class="plan-features">
+                    <li>Up to 10 Users</li>
+                    <li>Basic Analytics</li>
+                    <li>Email Support</li>
+                </ul>
+                <a href="#" class="btn pricing-btn">Get Started</a>
+            </div>
+            <div class="pricing-card popular">
+                <h3 class="plan-title">Standard</h3>
+                <p class="plan-price">$49<span>/month</span></p>
+                <ul class="plan-features">
+                    <li>Up to 50 Users</li>
+                    <li>Advanced Analytics</li>
+                    <li>Priority Email Support</li>
+                </ul>
+                <a href="#" class="btn pricing-btn">Get Started</a>
+            </div>
+            <div class="pricing-card">
+                <h3 class="plan-title">Premium</h3>
+                <p class="plan-price">$99<span>/month</span></p>
+                <ul class="plan-features">
+                    <li>Unlimited Users</li>
+                    <li>Full Analytics Suite</li>
+                    <li>24/7 Phone Support</li>
+                </ul>
+                <a href="#" class="btn pricing-btn">Get Started</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="testimonials">
+        <h2 class="section-title">What Our Clients Say</h2>
+        <div class="testimonials-container">
+            <div class="testimonial-card">
+                <p class="testimonial-text">"The ERP solution has completely transformed our business operations. It's easy to use and has improved our efficiency significantly."</p>
+                <p class="testimonial-author">John Doe</p>
+                <p class="testimonial-company">CEO, Tech Innovators</p>
+            </div>
+            <div class="testimonial-card">
+                <p class="testimonial-text">"Excellent customer support and a powerful system that scales with our needs. Highly recommend!"</p>
+                <p class="testimonial-author">Jane Smith</p>
+                <p class="testimonial-company">COO, Future Enterprises</p>
+            </div>
+            <div class="testimonial-card">
+                <p class="testimonial-text">"your system is easy simple and great to interact with as it has slime to none learning curve"</p>
+                <p class="testimonial-author">Jane Smith</p>
+                <p class="testimonial-company">COO, Future Enterprises</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <h2 class="section-title">Get in Touch</h2>
+        <p class="contact-description">Have any questions or need support? Reach out to us and we’ll be happy to assist you.</p>
+        <form class="contact-form">
+            <div class="form-group">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" placeholder="Your Name" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" placeholder="Your Email" required>
+            </div>
+            <div class="form-group">
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" rows="5" placeholder="Your Message" required></textarea>
+            </div>
+            <button type="submit" class="btn contact-btn">Send Message</button>
+        </form>
+    </section>
+</body>
+</html>
